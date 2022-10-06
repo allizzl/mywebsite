@@ -1,3 +1,6 @@
+/* another way to import local fonts */
+@import url(sentient.css);
+
 :root {
     --content-width: 50ch;
     --inset: calc(-1 * (100vw - var(--content-width)) / 4);
