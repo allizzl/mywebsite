@@ -5,8 +5,162 @@
     --content-width: 50ch;
     --inset: calc(-1 * (100vw - var(--content-width)) / 4);
   }
-  
   body {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #ffb2de;
+    font-family: 'Sentient-Regular';
+  }
+  
+  body > * {
+    padding: 0 1rem;
+  }
+  
+  .header {
+    /*   background-color: skyblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    color: #06193e;
+    font-size: 48px;
+  }
+  .navbar {
+    /*   background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar ul {
+    margin: 1rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style-type: none;
+  }
+  
+  .main {
+    /*   background: lightgreen; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2em;
+  }
+  
+  img {
+    --border: 15px;
+    --gap: 12px;
+    --color: #16ae25;
+    width: 200px;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: calc(var(--border) + var(--gap));
+  
+    --angle: 90deg;
+    background: radial-gradient(farthest-side, var(--color) 97%, #0000 101%)
+        85.35% 85.35%,
+      conic-gradient(
+        from calc(180deg - var(--angle) / 2),
+        #0000 var(--angle),
+        var(--color) 0
+      ),
+      radial-gradient(farthest-side, var(--color) 97%, #0000 101%) 14.65% 85.35%;
+    background-size: var(--border) var(--border), auto;
+    background-repeat: no-repeat;
+  
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #000 calc(99% - calc(var(--border) + var(--gap))),
+      #0000 calc(100% - calc(var(--border) + var(--gap)))
+        calc(99% - var(--border)),
+      #000 calc(100% - var(--border))
+    );
+    mask: radial-gradient(
+      farthest-side,
+      #000 calc(99% - calc(var(--border) + var(--gap))),
+      #0000 calc(100% - calc(var(--border) + var(--gap)))
+        calc(99% - var(--border)),
+      #000 calc(100% - var(--border))
+    );
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 15px;
+    border: none;
+    background: #16ae25;
+  }
+  
+  .sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #16ae25;
+    border-radius: 15px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  iframe {
+    height: 380px;
+    border-radius: 15px;
+    border-color: #16ae25;
+  }
+  
+  .footer {
+    /*   background-color: lavender; */
+  }
+  
+  @media screen and (min-width: 100ch) {
+    body {
+      display: grid;
+      grid-template-columns: 1fr minmax(15ch, 30%);
+      grid-template-rows: auto auto 1fr auto;
+    }
+  
+    .header {
+      grid-column: 1/-1;
+    }
+  
+    .navbar {
+      grid-column: 1/-1;
+    }
+  
+    .footer {
+      grid-column: 1/-1;
+    }
+  }
+  
+  @media screen and (min-width: 140ch) {
+    body {
+      grid-template-columns: minmax(15ch, 20%) 1fr minmax(15ch, 20%);
+    }
+  
+    .navbar {
+      grid-column: span 1;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+    }
+  }
+  
+  /* body {
     padding: 1rem;
   }
   
@@ -54,6 +208,5 @@
 
 /* my styles */
 body{
-    background: greenyellow;
-    font-family: 'Sentient-Regular';
-}
+   
+} */
