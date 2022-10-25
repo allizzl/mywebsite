@@ -1,3 +1,5 @@
+![screenshot of landing page site]()
+
 # Allison Haynie
 My landing page site, version controlled with GitHub and deployed with Netlify. 
 
