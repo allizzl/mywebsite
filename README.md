@@ -1,5 +1,5 @@
 ![screenshot of landing page site](https://github.com/ahaynie1/mywebsite/blob/main/screenshot1.png?raw=true)
-
+![screenshot of landing page site](https://github.com/ahaynie1/mywebsite/blob/main/screenshot2.png?raw=true)
 # Allison Haynie
 My landing page site, version controlled with GitHub and deployed with Netlify. 
 
