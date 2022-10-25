@@ -1,5 +1,5 @@
 # Allison Haynie
-My Website version controlled with GitHub and deployed with Netlify. 
+My landing page site, version controlled with GitHub and deployed with Netlify. 
 
 ## Citations
 * Favicons from [Favicon.io] (https://favicon.io/favicon-converter/)
