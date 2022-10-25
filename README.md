@@ -1,4 +1,4 @@
-![screenshot of landing page site]()
+![screenshot of landing page site](https://github.com/ahaynie1/mywebsite/blob/main/screenshot1.png?raw=true)
 
 # Allison Haynie
 My landing page site, version controlled with GitHub and deployed with Netlify. 
