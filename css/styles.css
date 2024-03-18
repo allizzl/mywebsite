@@ -59,10 +59,11 @@ h1 {
 .main {
   /*   background: lightgreen; */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  padding: 2em;
+  /* flex-wrap: wrap;
+  padding: 2em;  */
 }
 
 .main p {
@@ -170,6 +171,12 @@ iframe {
   }
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
 
 /* spotify styles?? */
 

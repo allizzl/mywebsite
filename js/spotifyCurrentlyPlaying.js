@@ -112,7 +112,7 @@
 
       // Set the request URL for Last.fm
       var lastfm_request_url =
-        "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" +
+        "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" +
         this.username +
         "&api_key=" +
         this.api_key +
