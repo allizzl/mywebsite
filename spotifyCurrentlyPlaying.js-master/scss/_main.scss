@@ -1,0 +1,185 @@
+// Main
+
+html,
+body {
+    min-height: 100%;
+    background: $secondary;
+}
+
+body {
+	font: 100%/1.5 $font;
+	-webkit-text-size-adjust: 100%;
+	color: $primary;
+    min-width: $min-width;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $primary-light;
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 0;
+    margin: 1.25rem 0;
+    height: 1px;
+    background: $primary;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 0.9rem;
+
+    & + .btn {
+        margin-top: 0.5rem;
+    }
+}
+
+::selection {
+    background: $white;
+    color: $secondary;
+}
+
+::-moz-selection {
+    background: $white;
+    color: $secondary;
+}
+
+.social-share {
+    font-size: 4rem;
+    line-height: 0;
+
+    @media all and (min-width: $bp-xs) {
+        font-size: 6rem;
+    }
+
+    li {
+        display: inline-block;
+        transform: translateY(0);
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+// Pre/Code
+
+code,
+pre,
+xmp {
+    color: $white;
+    background: $secondary-light;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin: 0;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+
+    .comment {
+        color: #8C93A0;
+    }
+}
+
+pre,
+:not(pre) > xmp {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    overflow: auto;
+}
+
+:not(pre) > code {
+    padding: 0.1rem;
+    white-space: normal;
+}
+
+// Sections
+.section {
+    padding: 0;
+    border-bottom: 5px solid $secondary-light;
+
+    @media all and (min-width: $bp-s) {
+        padding: 1rem 0;
+    }
+
+    @media all and (min-width: $bp-l) {
+        padding: 2rem 0;
+    }
+
+    h4 {
+        margin-top: 1.25rem;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+}
+
+.section--hero {
+    padding: 2rem 0;
+    background: $primary;
+    color: $secondary;
+
+    @media all and (min-width: $bp-s) {
+        padding: 4rem 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        @media all and (min-width: $bp-xs) {
+            font-size: 2rem;
+        }
+
+        @media all and (min-width: $bp-s) {
+            font-size: 3rem;
+        }
+
+        @media all and (min-width: $bp-m) {
+            font-size: 4rem;
+        }
+    }
+
+    h3 {
+        font-size: 0.9rem;
+
+        @media all and (min-width: $bp-s) {
+            font-size: 1.75rem;
+        }
+    }
+}
+
+.section--hero,
+.section--share {
+    border-bottom: none;
+}

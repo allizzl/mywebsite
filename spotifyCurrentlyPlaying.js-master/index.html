@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+        <title>spotifyCurrentlyPlaying.js - Share your love of music with the world.</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- SEO -->
+        <meta name="description" content="Display your currently playing Spotify song(s) using Last.fm scrobbling.">
+        <meta name="keywords" content="spotify, widget, last.fm, scrobbling, currently playing, recently played, music sharing, kjbrum, kyle brumm">
+        <meta name="author" content="Kyle Brumm">
+
+        <!-- Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="spotifyCurrentlyPlaying.js - Share your love of music with the world.">
+        <meta property="og:description" content="Display your currently playing Spotify song(s) using Last.fm scrobbling.">
+        <meta property="og:url" content="http://kylebrumm.com/spotifyCurrentlyPlaying.js/">
+        <meta property="og:image" content="http://kylebrumm.com/spotifyCurrentlyPlaying.js/img/spotify-currently-playing.png">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="spotifyCurrentlyPlaying.js - Share your love of music with the world.">
+        <meta name="twitter:description" content="Display your currently playing Spotify song(s) using Last.fm scrobbling.">
+        <meta name="twitter:url" content="http://kylebrumm.com/spotifyCurrentlyPlaying.js/">
+        <meta name="twitter:image" content="http://kylebrumm.com/spotifyCurrentlyPlaying.js/img/spotify-currently-playing.png">
+
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-32465732-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+
+    <body>
+        <!-- Github badge -->
+        <a href="https://github.com/kjbrum/spotifyCurrentlyPlaying.js" target="_blank" onclick="ga('send', 'event', 'GitHub Ribbon', 'click');" class="github-corner"><svg width="100" height="100" viewBox="0 0 250 250" style="fill:#3E405D; color:#98E494; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+        <!-- Hero Section -->
+        <section class="section section--hero">
+            <div class="container">
+                <h1>spotifyCurrentlyPlaying.js</h1>
+                <h3>Share your love of music with the world.</h3>
+            </div>
+        </section>
+
+        <!-- Prerequisites section -->
+        <section class="section section--prerequisites">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Prerequisites</h2>
+                    <small class="subheading">What do you need to get started?</small>
+                </div>
+
+                <h4>01/ Last.fm Account</h4>
+                <p>
+                    You will need to have a Last.fm account to use.
+                </p>
+                <a class="btn btn-small shake shake-little" href="https://secure.last.fm/join" target="_blank">Create an Account</a>
+
+                <h4>02/ Last.fm API Access</h4>
+                <p>
+                    You will need to have access to the Last.fm API. Be sure to make a note of your API key.
+                </p>
+                <a class="btn btn-small shake shake-little" href="http://www.last.fm/api/account/create" target="_blank">Create an App</a>
+
+                <h4>03/ Connect Your Last.fm Account to Spotify</h4>
+                <p>You can do this by opening the desktop application and going to "Preferences". You will see a section with the heading "LAST.FM". Enter your username and password to give Spotify access. This is so Spotify can scrobble the songs you play to Last.fm.</p>
+
+            </div>
+        </section>
+
+        <!-- Install section -->
+        <section class="section section--install">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Install</h2>
+                    <small class="subheading">Feel free to use whichever method is easiest for your project.</small>
+                </div>
+
+                <h4>Bower:</h4>
+                <pre>$ bower install spotifyCurrentlyPlaying.js</pre>
+
+                <h4>npm:</h4>
+                <pre>$ npm install spotifyCurrentlyPlaying.js</pre>
+
+                <h4>CDN:</h4>
+                <pre>&lt;script src="https://unpkg.com/spotifyCurrentlyPlaying.js/dist/spotifyCurrentlyPlaying.min.js"&gt;&lt;/script&gt;</pre>
+
+                <hr>
+
+                <a class="btn shake shake-little" href="https://github.com/kjbrum/spotifyCurrentlyPlaying.js/" target="_blank">View on Github</a>
+                <a class="btn shake shake-little" href="https://github.com/kjbrum/spotifyCurrentlyPlaying.js/archive/master.zip">Download Repo</a>
+            </div>
+        </section>
+
+        <!-- Setup section -->
+        <section class="section section--setup">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Setup</h2>
+                    <small class="subheading">Lets figure out how to make this thing work.</small>
+                </div>
+
+                <h4>Add the script:</h4>
+                <pre><span class="comment">// Place this before the closing body tag</span>
+&lt;script src="path/to/spotifyCurrentlyPlaying.min.js"&gt;&lt;/script&gt;</pre>
+
+                <h4>Create a container:</h4>
+                <pre><span class="comment">// This will be used to display the Spotify widget</span>
+&lt;div id="spotify-widget"&gt;&lt;/div&gt;</pre>
+
+                <h4>Call the SCP( ) function:</h4>
+                <pre><span class="comment">// You will need to pass your parameters to the function
+// You can initialize it with SCP() or SpotifyCurrentlyPlaying()</span>
+SCP({
+    selector: '#spotify-widget',
+    username: 'kjbrum',
+    api_key: 'xxxxxxxxxxxxxxx',
+    width: '100%',
+    height: '370'
+});</pre>
+            </div>
+        </section>
+
+        <!-- Results section -->
+        <section class="section section--results">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Results</h2>
+                    <small class="subheading">This is similar to what you will get on your website.</small>
+                </div>
+
+                <iframe width="100%" height="370" src="https://embed.spotify.com/?uri=spotify%3atrack%3a7vqUr6K2Js9Paq4kdNSOm6" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+        </section>
+
+        <!-- Share section -->
+        <section class="section section--share">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Spread the <i class="fa fa-heart"></i></h2>
+                    <small class="subheading">Things are better when shared with friends.</small>
+                </div>
+
+                <ul class="social-share">
+                    <li><a href="https://twitter.com/intent/tweet?text=Add+a+Spotify+widget+to+your+website+that+displays+your+currently+playing+song.&url=http://kylebrumm.com/spotifyCurrentlyPlaying.js" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                    <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://kylebrumm.com/spotifyCurrentlyPlaying.js" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href="https://plus.google.com/share?url=http://kylebrumm.com/spotifyCurrentlyPlaying.js" target="_blank"><i class="fa fa-google-plus-square"></i></a></li>
+                    <li><a href="http://pinterest.com/pin/create/button/?url=http://kylebrumm.com/spotifyCurrentlyPlaying.js&description=Add+a+Spotify+widget+to+your+website+that+displays+your+currently+playing+song.&media=http://kylebrumm.com/spotifyCurrentlyPlaying.js/img/spotify-currently-playing.png" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>Built with <i class="shake shake-constant fa fa-heart"></i> by <a href="http://kylebrumm.com" onclick="ga('send', 'event', 'Portfolio Link', 'click');">Kyle Brumm</a></p>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="dist/spotifyCurrentlyPlaying.js"></script>
+        <script>
+            ;(function(global) {
+                /**
+                 *  Social sharing popup window
+                 */
+                var jsSocialShares = document.querySelectorAll('.social-share a');
+                if(jsSocialShares) {
+                    [].forEach.call(jsSocialShares, function(anchor) {
+                        anchor.addEventListener('click', function(e) {
+
+                            var url = this.href,
+                                width = 500,
+                                height = 300,
+                                left = (screen.width / 2) - (width / 2),
+                                top = (screen.height / 2) - (height / 2);
+
+                            if(/^(f|ht)tps?:\/\//i.test(url) || /^mailto/i.test(url)) {
+                                e.preventDefault();
+                                window.open(
+                                    url,
+                                    '',
+                                    'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left
+                                );
+                            }
+
+                        });
+                    });
+                }
+            })(window);
+        </script>
+
+    </body>
+</html>
