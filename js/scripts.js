@@ -1,7 +1,7 @@
 console.log("Hello World!");
 
 // spotify API
-if (typeof SCP === "function") {
+if (typeof SpotifyCurrentlyPlaying === "function") {
   console.log("SCP function is loaded!");
 } else {
   console.log("SCP function is not loaded.");
