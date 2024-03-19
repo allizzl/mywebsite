@@ -74,7 +74,8 @@ h1 {
 img {
   --border: 15px;
   --gap: 12px;
-  --color: #16ae25;
+  /* --color: #16ae25; */
+  --color: #FF49B0;
   width: 200px;
   aspect-ratio: 1;
   box-sizing: border-box;
