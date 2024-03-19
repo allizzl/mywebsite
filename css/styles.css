@@ -101,6 +101,54 @@ img {
       #000 calc(100% - var(--border)));
 }
 
+/* spotify widget styles */
+.widget {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.widget h2 {
+  margin-top: 0;
+}
+
+.widget ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.widget li {
+  margin-bottom: 10px;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+}
+
+.track img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.track-info {
+  flex-grow: 1;
+}
+
+.track-info h3 {
+  margin: 0;
+}
+
+.track-info p {
+  margin: 0;
+  color: #666;
+}
+
 button {
   display: flex;
   align-items: center;
@@ -179,7 +227,7 @@ iframe {
 
 }
 
-/* spotify styles?? */
+
 
 /* my styles */
 body {}
