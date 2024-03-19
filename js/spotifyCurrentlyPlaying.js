@@ -11,10 +11,12 @@
  *
  */
 
-(function (global) {
+ (function (global) {
   var SpotifyCurrentlyPlaying = function (settings) {
-    return new SpotifyCurrentlyPlaying.init(settings);
-  };
+      // Only call init if 'this' is not an instance of SpotifyCurrentlyPlaying
+      if (!(this instanceof SpotifyCurrentlyPlaying)) {
+        return new SpotifyCurrentlyPlaying.init(settings);
+    }
 
   SpotifyCurrentlyPlaying.prototype = {
     /******************************
@@ -277,8 +279,9 @@
    *  Initializing our function *
    *************************************/
   SpotifyCurrentlyPlaying.init = function (settings) {
-    var self = this;
-
+    // var self = this;
+    var self = new SpotifyCurrentlyPlaying(settings);
+    console.log("Self object:", self);
     // Setup settings
     self.selector = settings.selector || ".scp-container"; // Selector for the container
     self.username = settings.username || ""; // LastFM username
@@ -289,6 +292,8 @@
     self.view = settings.view || "list"; // View of the player
     self.count = parseInt(settings.count) || 1; // Number of tracks to display
     self.backup_ids = settings.backup_ids || []; // Backup IDs of tracks to display if no tracks are found
+
+    return self;
 
     // Used for storing data
     self.spotify_URIs = []; // Spotify URIs
