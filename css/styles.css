@@ -71,7 +71,7 @@ h1 {
   font-size: 1.25em;
 }
 
-img {
+#headshot {
   --border: 15px;
   --gap: 12px;
   /* --color: #16ae25; */
@@ -108,7 +108,7 @@ img {
   border-radius: 8px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 400px;
 }
 
 .widget h2 {
