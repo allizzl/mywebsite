@@ -22,15 +22,18 @@
      ******************************/
     displayPlayer: function () {
       var self = this;
+      console.log("Inside displayPlayer");
 
       // Check for missing selector
       if (!this.selector) {
         throw "Missing selector";
       }
-
+      console.log("Selector:", self.selector);
       // Get the most recent track
       self.queryLastfm(function () {
+        console.log("Querying Last.fm");
         // Search Spotify for the track
+        console.log("Searching Spotify");
         self.searchSpotify(function () {
           var container = self.selector;
 
@@ -109,6 +112,12 @@
      ******************************************************/
     queryLastfm: function (callback) {
       var self = this;
+      console.log(
+        "Querying Last.fm API with username:",
+        self.username,
+        "and API key:",
+        self.api_key
+      );
 
       // Set the request URL for Last.fm
       var lastfm_request_url =
@@ -177,7 +186,7 @@
       var self = this;
       var tracks = self.lastfm_tracks;
       var tracksProcessed = 1;
-
+      console.log("Searching Spotify API");
       if (tracks.length > 0) {
         // Loop through the tracks
         tracks.forEach(function (el, idx, arr) {
@@ -194,15 +203,29 @@
             }
           }
 
-          // Set the request URL for Spotify
-          var spotify_request_url =
-            "https://api.spotify.com/v1/search?query=" +
-            encodeURIComponent(search_query) +
-            "&offset=0&limit=1&type=track";
+          // // Set the request URL for Spotify
+          // var spotify_request_url =
+          //   "https://api.spotify.com/v1/search?query=" +
+          //   encodeURIComponent(search_query) +
+          //   "&offset=0&limit=1&type=track";
 
-          // Make a request to the Spotify API
+          // // Make a request to the Spotify API
+          // var request = new XMLHttpRequest();
+          // request.open("GET", spotify_request_url, true);
+
+          // Set the request URL for Last.fm
+          var lastfm_request_url =
+            "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" +
+            this.username +
+            "&api_key=" +
+            this.api_key +
+            "&limit=" +
+            self.count +
+            "&format=json";
+
+          // Make a request to the Last.fm API
           var request = new XMLHttpRequest();
-          request.open("GET", spotify_request_url, true);
+          request.open("GET", lastfm_request_url, true);
 
           // Check for a successful response
           request.onload = function () {
