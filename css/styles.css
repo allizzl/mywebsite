@@ -109,6 +109,7 @@ h1 {
   padding: 20px;
   margin: 20px auto;
   max-width: 400px;
+  font-family: author;
 }
 
 .widget h2 {
@@ -122,6 +123,7 @@ h1 {
 
 .widget li {
   margin-bottom: 10px;
+  font-family: "author-semibold";
 }
 
 .track {
@@ -149,6 +151,33 @@ h1 {
   color: #666;
 }
 
+.spotify-follow-button {
+  /* position: absolute; */
+  /* top: 10px;
+  right: 10px; */
+  margin-top: auto;
+  z-index: 1;
+}
+
+.spotify-follow-button img {
+  width: 4rem;
+  /* height: 40px; */
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.spotify-follow-button img:hover {
+  transform: scale(1.1);
+}
+
+#spotify-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 button {
   display: flex;
   align-items: center;
@@ -160,6 +189,10 @@ button {
   /* background: #16ae25; */
   background: #ffffff;
   ;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 .sidebar {

@@ -3,7 +3,7 @@ console.log("Hello World!");
 // CONSTRUCT REQUEST
 const apiKey = "e9cbee3fba623ee28d3bb33db4e04bfc";
 const username = "allizzl";
-const limit = 10; // Number of recent tracks to fetch
+const limit = 5; // Number of recent tracks to fetch
 
 const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json&limit=${limit}`;
 
