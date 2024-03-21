@@ -84,10 +84,10 @@ h1 {
   font-size: 1.25em;
 }
 
-#headshot {
+/* #headshot {
   --border: 15px;
   --gap: 12px;
-  /* --color: #16ae25; */
+   --color: #16ae25; 
   --color: #FF49B0;
   width: 200px;
   aspect-ratio: 1;
@@ -112,6 +112,24 @@ h1 {
       #000 calc(99% - calc(var(--border) + var(--gap))),
       #0000 calc(100% - calc(var(--border) + var(--gap))) calc(99% - var(--border)),
       #000 calc(100% - var(--border)));
+} */
+
+
+#headshot {
+  width: 200px;
+  /* Set the width */
+  height: 200px;
+  /* Set the height */
+  overflow: hidden;
+  /* Hide overflow */
+  border-radius: 50%;
+  /* Make it a circle */
+}
+
+#headshot img {
+  height: 100%;
+  width: auto;
+  margin-left: -22px;
 }
 
 /* spotify widget styles */
@@ -191,6 +209,8 @@ h1 {
   justify-content: space-between;
 }
 
+/* end spotify widget section */
+
 button {
   display: flex;
   align-items: center;
@@ -215,6 +235,7 @@ button:hover {
   /* background: #16ae25; */
   border-radius: 15px;
 }
+
 
 a {
   color: black;
