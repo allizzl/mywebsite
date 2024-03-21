@@ -412,6 +412,14 @@ iframe {
 
 }
 
+@media screen and (max-width: 768px) {
+
+  /* Styles specific to mobile layout */
+  aside {
+    max-width: 90%;
+  }
+}
+
 /* .card {
   display: flex;
   flex-direction: column;
