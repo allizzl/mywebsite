@@ -250,6 +250,7 @@ main p {
   margin-top: 0;
   margin-bottom: 0;
   color: #ffffff;
+  font-family: author;
   /* White text color */
 }
 
@@ -420,6 +421,8 @@ iframe {
   /* Styles specific to mobile layout */
   aside {
     max-width: 90%;
+    font-family: author;
+
   }
 
 }
