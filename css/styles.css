@@ -1,4 +1,3 @@
-/* another way to import local fonts */
 @import url(sentient.css);
 @import url(author.css);
 
@@ -48,6 +47,7 @@ h1 {
 
 body h3 {
   font-family: author-regular;
+  align-items: center;
 
   /* max-width: 375px; */
 }
@@ -93,7 +93,7 @@ body h3 {
   justify-content: center; */
 }
 
-.main {
+main {
   /*   background: lightgreen; */
   display: flex;
   flex-direction: column;
@@ -103,8 +103,8 @@ body h3 {
   padding: 2em;  */
 }
 
-.main p {
-  font-family: "sentient-regular";
+main p {
+  font-family: "author-regular";
   font-size: 1.25em;
 }
 
@@ -393,6 +393,7 @@ iframe {
 
   .footer {
     grid-column: 1/-1;
+
   }
 }
 
@@ -404,6 +405,8 @@ iframe {
   .navbar {
     grid-column: span 1;
   }
+
+
 
   .navbar ul {
     flex-direction: column;
@@ -418,6 +421,7 @@ iframe {
   aside {
     max-width: 90%;
   }
+
 }
 
 /* .card {
