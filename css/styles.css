@@ -27,7 +27,7 @@ body>* {
 }
 
 h1 {
-  color: #06193e;
+  /* color: #06193e; */
   font-size: 48px;
   font-family: 'Author-Bold';
 }
@@ -133,7 +133,7 @@ h1 {
 }
 
 /* spotify widget styles */
-.widget {
+/* .widget {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -184,15 +184,15 @@ h1 {
 
 .spotify-follow-button {
   /* position: absolute; */
-  /* top: 10px;
-  right: 10px; */
+/* top: 10px;
+  right: 10px; 
   margin-top: auto;
   z-index: 1;
 }
 
 .spotify-follow-button img {
   width: 4rem;
-  /* height: 40px; */
+  /* height: 40px; 
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -207,9 +207,98 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+} */
+
+/* spotify widget styles */
+.widget {
+  background-color: #121212;
+  /* Dark mode background color */
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  /* Adjusted shadow color */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 360px;
+  font-family: author;
+}
+
+.widget h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ffffff;
+  /* White text color */
+}
+
+.widget ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.widget li {
+  margin-bottom: 10px;
+  font-family: "author-semibold";
+  border-bottom: 1px solid #333;
+  /* Thin line to separate track items */
+  padding-bottom: 10px;
+  /* Added padding to space out the tracks */
+}
+
+.track {
+  display: flex;
+  align-items: center;
+}
+
+.track img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.track-info {
+  flex-grow: 1;
+}
+
+.track-info h3 {
+  margin: 0;
+  color: #ffffff;
+  /* White text color */
+}
+
+.track-info p {
+  margin: 0;
+  color: #999;
+  /* Light gray text color */
+}
+
+.spotify-follow-button {
+  margin-top: auto;
+  z-index: 1;
+}
+
+.spotify-follow-button img {
+  width: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  /* Adjusted shadow color */
+  transition: transform 0.3s ease;
+  vertical-align: bottom;
+  /* Align the bottom edge of the Spotify logo with the H2 */
+}
+
+.spotify-follow-button img:hover {
+  transform: scale(1.1);
+}
+
+#spotify-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 /* end spotify widget section */
+
 
 button {
   display: flex;
@@ -287,12 +376,12 @@ iframe {
   }
 }
 
-.card {
+/* .card {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-}
+} */
 
 
 
