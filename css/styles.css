@@ -424,6 +424,10 @@ iframe {
     font-family: author;
   }
 
+  aside h3 {
+    text-align: start;
+  }
+
   main h3 {
     text-align: center;
   }
