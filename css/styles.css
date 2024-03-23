@@ -98,6 +98,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* align-self: start; */
   /* justify-content: center; */
   /* flex-wrap: wrap;
   padding: 2em;  */
@@ -384,6 +385,10 @@ iframe {
     grid-template-rows: auto auto 1fr auto;
   }
 
+  main {
+    align-self: start;
+  }
+
   .header {
     grid-column: 1/-1;
   }
@@ -407,7 +412,10 @@ iframe {
     grid-column: span 1;
   }
 
-
+  main {
+    /* grid-row: 2 / 3; */
+    align-self: start;
+  }
 
   .navbar ul {
     flex-direction: column;
@@ -422,6 +430,7 @@ iframe {
   aside {
     max-width: 90%;
     font-family: author;
+
   }
 
   aside h3 {
