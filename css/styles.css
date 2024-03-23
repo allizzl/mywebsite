@@ -422,9 +422,11 @@ iframe {
   aside {
     max-width: 90%;
     font-family: author;
-
   }
 
+  h3 {
+    text-align: center;
+  }
 }
 
 /* .card {
