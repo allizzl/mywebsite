@@ -61,6 +61,7 @@ body h3 {
   margin: 1rem 0;
   padding: 0;
   gap: 1rem;
+  min-width: 300px;
 
 }
 
