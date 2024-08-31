@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background: #ffb2de;
+  background: #FAEDCD;
   max-width: 100vw;
   /* Set maximum width to viewport width */
   overflow-x: hidden;
@@ -31,6 +31,7 @@ body>* {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -48,6 +49,8 @@ h1 {
 body h3 {
   font-family: author-regular;
   align-items: center;
+  color: #8c0042;
+
 
   /* max-width: 375px; */
 }
@@ -333,11 +336,8 @@ button {
   align-items: center;
   justify-content: center;
   padding: 1em;
-  border-radius: 15px;
-  border-color: #000;
-  border: 2px 2px;
-  /* background: #16ae25; */
-  background: #ffffff;
+  border-radius: 60px;
+  background: #FF0A74;
   ;
 }
 
@@ -356,7 +356,7 @@ button:hover {
 
 
 a {
-  color: black;
+  color: #FAEDCD;
   text-decoration: none;
 
 }
