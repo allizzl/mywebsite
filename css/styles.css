@@ -13,8 +13,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  background: #FAEDCD;
   max-width: 100vw;
+  background: #FAEDCD;
+
   /* Set maximum width to viewport width */
   overflow-x: hidden;
   /* Hide horizontal overflow */
@@ -98,7 +99,6 @@ body h3 {
 }
 
 main {
-  /*   background: lightgreen; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -367,6 +367,55 @@ iframe {
   border-color: #16ae25;
 }
 
+/* gradient border styles */
+
+
+.gradient-border {
+  --borderWidth: 3px;
+  /* background: #FAEDCD; */
+  position: relative;
+  /* border-radius: var(--borderWidth); */
+  border-radius: 20%;
+  z-index: -5;
+
+}
+
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  /* border-radius: calc(2 * var(--borderWidth)); */
+  border-radius: 2%;
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+.inner-bg {
+  background: #FAEDCD;
+  width: 98%;
+  height: 98vh;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* end gradient border styles  */
 .footer {
   /* background-color: #CFECCC; */
   width: 100%;
