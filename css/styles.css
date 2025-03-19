@@ -273,7 +273,7 @@ main p {
   border-radius: 8px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 400px;
+  max-width: 360px;
   font-family: author;
 }
 
@@ -296,6 +296,7 @@ main p {
   border-bottom: 1px solid #333;
   /* Thin line to separate track items */
   padding-bottom: 10px;
+
   /* Added padding to space out the tracks */
 }
 
@@ -318,6 +319,7 @@ main p {
 .track-info h3 {
   margin: 0;
   color: #ffffff;
+  padding-left: 0%;
   /* White text color */
 }
 
